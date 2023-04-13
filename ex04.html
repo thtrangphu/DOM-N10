@@ -1,185 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <title>Nhóm 10 - Password</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-  </head>
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <body>
-    <header>
-      <!-- place navbar here -->
-      <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">Nhóm 10</a>
-          <button
-            class="navbar-toggler d-lg-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="ex01.html">Check/Uncheck all</a>
-              </li>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-              <li class="nav-item">
-                <a class="nav-link" href="ex02.html">Active Icon</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ex03.html">Disable Link</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ex04.html">Password</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ex05.html">Filter List</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ex06.html">Add Item</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ex07.html">Remove Item</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ex08.html">Edit Item</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ex09.html">Fetch Data</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="ex10.html">Pagination</a>
-              </li>
-            </ul>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Nhóm 10</a>
+        <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="ex01.html">Check/Uncheck all</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="ex02.html">Active Icon</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ex03.html">Disable Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ex04.html">Password</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ex05.html">Filter List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ex06.html">Add Item</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ex07.html">Remove Item</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ex08.html">Edit Item</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ex09.html">Fetch Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ex10.html">Pagination</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+  </header>
+  <main>
+    <div class="container">
+
+        
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="password" name="password" aria-describedby="passwordHelp" 
+              onchange="validatePassword()" required>
+            </div>
+            <div id="passwordHelp" class="form-text">Must be at least 8 characters long.</div>
+          </div>
+          <div class="mb-3">
+            <label for="confirmPassword" class="form-label">Confirm Password</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+              onkeyup="validatePassword()" required>
+            </div>
+          </div>
+          <input type="checkbox" value = "true" onclick="showPassword(this.checked)"> Show Password
+          <div>
+            <button type = "submit" class = "btn btn-primary">
+              Update
+            </button>
           </div>
         </div>
-      </nav>
-    </header>
+    </div>
 
-    <main>
-      <h1 class="text-center">Password Confirm & Show/Hide Passwords</h1>
-      <div class="container">
-        <form action="#" method="post">
-          <div class="mb-3">
-            <label for="passwords" class="form-label">Password</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter password"
-              id="password"
-              class="form-control"
-            />
-          </div>
-          <div class="mb-3">
-            <label for="confirmPassword" class="form-label"
-              >Confirm Password</label
-            >
-            <input
-              type="password"
-              name="confirmPassword"
-              placeholder="Confirm password"
-              id="confirmPassword"
-              class="form-control"
-              onchange="validatePassword()"
-            />
-          </div>
-          <div class="form-check form-check-inline">
-            <input
-              type="checkbox"
-              id="showPassword"
-              value="true"
-              onclick="showPassword(this.checked)"
-            />
-            <label for="showPassword" class="form-check-label"
-              >Show Password</label
-            >
-          </div>
-          <div>
-            <button type="submit" class="btn btn-primary">Update</button>
-          </div>
-        </form>
-      </div>
-    </main>
-    <footer>
-      <!-- place footer here -->
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script>
+      
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      function showPassword(checked) {
-        if (checked) {
-          document
-            .querySelectorAll('input[type="password"]')
-            .forEach((item) => (item.type = "text"));
-        } else {
-          document
-            .querySelectorAll('input[type="text"]')
-            .forEach((item) => (item.type = "password"));
-        }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script>
+    function showPassword(checked){
+      if (checked){
+        document.querySelectorAll('input[type=password]').forEach
+        (item => item.type ='text')
+      }else{
+        document.querySelectorAll('input[type=text]').forEach
+        (item => item.type ='password')
       }
-
-      function validatePassword() {
-        let password = document.getElementById("password");
-        let confirmPassword = document.getElementById("confirmPassword");
-        if (password.value !== confirmPassword.value) {
-          confirmPassword.setCustomValidity("Passwords must match");
-        } else {
-          confirmPassword.setCustomValidity("");
-        }
+      
+    }
+    function validatePassword(){
+      let password = document.getElementById("password");
+      let confirmPassword = document.getElementById("confirmPassword");
+    
+      if (password.value != confirmPassword.value){
+        confirmPassword.setCustomValidity("Passwords must match");
+        confirmPassword.reportValidity()
       }
+      else{
+        confirmPassword.setCustomValidity('');
+        password.setCustomValidity('');
+      }
+    }
+  </script>
+</body>
 
-      // <>
-      // function showPassword(checked){
-      //   if (checked){
-      //     document.querySelectorAll('input[type=password]').forEach
-      //     (item => item.type ='text')
-      //   }else{
-      //     document.querySelectorAll('input[type=text]').forEach
-      //     (item => item.type ='password')
-      //   }
-
-      // }
-      // function validatePassword(){
-      //   let password = document.getElementById("password");
-      //   let confirmPassword = document.getElementById("confirmPassword");
-
-      //   if (password.value != confirmPassword.value){
-      //     confirmPassword.setCustomValidity("Passwords must match");
-      //     confirmPassword.reportValidity()
-      //   }
-      //   else{
-      //     confirmPassword.setCustomValidity('');
-      //     password.setCustomValidity('');
-      //   }
-      // }
-    </script>
-  </body>
 </html>
